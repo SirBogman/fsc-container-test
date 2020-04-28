@@ -12,7 +12,7 @@ RUN time /usr/bin/dotnet build -c Release /source/myapp1.fsproj
 # Simulate replacing program with new code.
 RUN echo // comment >> Program.fs
 
-# Build again without nuget restore.
+# Build again without nuget restore. It takes too long.
 RUN time /usr/bin/dotnet build -c Release --no-restore /source/myapp1.fsproj
 
 # Run with --no-restore. Takes about 1.75 seconds.
